@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="250.0" maxWidth="350.0" minHeight="250.0" minWidth="350.0"
+            prefHeight="250.0"
+            prefWidth="350.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            fx:controller="GUI.LoginController">
+    <center>
+        <GridPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="200.0" maxWidth="350.0" minHeight="200.0"
+                  minWidth="350.0"
+                  prefHeight="200.0" prefWidth="350.0"
+                  xmlns="http://javafx.com/javafx/10.0.2-internal">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="150.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="235.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints/>
+            </rowConstraints>
+            <children>
+                <Label text="UserID" translateX="25.0" GridPane.rowIndex="0"/>
+                <Label text="Passwort" translateX="25.0" GridPane.rowIndex="1"/>
+                <Label text="Neu-Anmeldung" translateX="25.0" GridPane.rowIndex="2"/>
+                <TextField fx:id="useridString" prefHeight="25.0" maxWidth="180.0" GridPane.columnIndex="1"
+                           GridPane.rowIndex="0"/>
+                <PasswordField fx:id="passwortString" prefHeight="25.0" maxWidth="180.0" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1"/>
+                <CheckBox fx:id="anmeldungBox" onAction="#checkNeuAnmeldung" mnemonicParsing="false"
+                          GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Button fx:id="anwendenBtn" onAction="#anwenden" mnemonicParsing="false" text="Ausführen"
+                        translateX="25.0" GridPane.rowIndex="3"/>
+            </children>
+        </GridPane>
+    </center>
+    <top>
+        <Label prefHeight="26.0" prefWidth="214.0" text="Benutzerverwaltung" translateX="25.0" translateY="10.0">
+            <font>
+                <Font name="Arial Bold" size="22.0"/>
+            </font>
+        </Label>
+    </top>
+</BorderPane>
